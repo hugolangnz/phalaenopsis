@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蝴蝶兰奥克兰养殖指南</title>
+<meta name="description" content="针对奥克兰气候的蝴蝶兰养护手册：光照、温度、浇水、施肥、换盆与诊断。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:#f7f3ed; --parchment:#ede7db; --ink:#1a1410; --ink-light:#3d3028;
+    --orchid:#8b4a6b; --orchid-light:#c17fa0; --orchid-pale:#f3e6ee;
+    --gold:#9a7628; --moss:#4a6741; --moss-pale:#e8efe5; --warn:#b3392b; --border:#d9ccb8;
+    --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);color:var(--ink);font-family:'Noto Serif SC',serif;font-weight:300;line-height:1.85;font-size:16px}
+  strong{font-weight:600}
+  img{max-width:100%;height:auto;display:block}
+
+  /* Cover */
+  .cover{background:linear-gradient(160deg,#1a0e15,#2d1a24 45%,#1a1410);color:var(--cream);padding:56px 16px 48px}
+  .cover-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--orchid-light);letter-spacing:4px;font-size:13px;text-transform:uppercase;margin-bottom:20px}
+  .cover h1{font-weight:600;font-size:clamp(34px,5.5vw,56px);line-height:1.25;letter-spacing:4px;margin-bottom:14px}
+  .cover .sub{color:rgba(247,243,237,.7);font-size:15px;max-width:30em}
+  .cover .ver{margin-top:28px;font-size:12px;letter-spacing:2px;color:rgba(247,243,237,.45)}
+  .cover figure{border:1px solid rgba(193,127,160,.35)}
+  .cover figure img{aspect-ratio:3/4;object-fit:cover;width:100%}
+  .cover figcaption{font-size:12px;color:rgba(247,243,237,.6);padding:8px 10px}
+
+  /* Layout */
+  .content{max-width:860px;margin:0 auto;padding:56px 16px 72px}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px}
+  .toc a{font-size:13px;color:var(--orchid);text-decoration:none;border:1px solid var(--border);background:var(--card);padding:4px 12px;border-radius:999px}
+  .toc a:hover{border-color:var(--orchid-light)}
+
+  .principle{background:linear-gradient(135deg,#2d1a24,#1a1410);border-left:3px solid var(--orchid);padding:28px 32px;color:var(--cream);margin-bottom:28px}
+  .principle .label{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--orchid-light);letter-spacing:4px;font-size:12px;text-transform:uppercase;margin-bottom:10px}
+  .principle p{font-size:16px}
+  .principle b{color:var(--orchid-light);font-weight:600}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:64px}
+  .stat{background:var(--parchment);padding:16px 14px;text-align:center}
+  .stat .k{font-size:12px;color:var(--orchid);letter-spacing:2px}
+  .stat .v{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;line-height:1.25;margin:2px 0}
+  .stat .n{font-size:12px;color:var(--ink-light);opacity:.8;line-height:1.5}
+
+  section{margin-bottom:64px;scroll-margin-top:16px}
+  .sh{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:22px}
+  .sh .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--orchid);font-size:38px;line-height:1}
+  .sh h2{font-weight:600;font-size:21px;letter-spacing:3px}
+
+  .card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--orchid-light);padding:18px 22px;margin-bottom:12px}
+  .card.moss{border-left-color:var(--moss)} .card.gold{border-left-color:var(--gold)} .card.warn{border-left-color:var(--warn)}
+  .card h3{font-weight:600;font-size:15px;letter-spacing:1px;color:var(--orchid);margin-bottom:6px}
+  .card.moss h3{color:var(--moss)} .card.gold h3{color:var(--gold)} .card.warn h3{color:var(--warn)}
+  .card p,.card li{font-size:15px;color:var(--ink-light)}
+  .card ul{padding-left:1.2em} .card li{margin:2px 0}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .note{background:var(--orchid-pale);border:1px solid var(--orchid-light);padding:14px 18px;font-size:14.5px;margin:12px 0}
+
+  figure.photo{border:1px solid var(--border);background:var(--card);margin:16px 0}
+  figure.photo img{width:100%;object-fit:cover}
+  figure.photo figcaption{background:var(--parchment);padding:10px 16px;font-size:13px;color:var(--ink-light);line-height:1.7}
+  .side{display:grid;grid-template-columns:1fr 1.1fr;gap:16px;align-items:start}
+  .side figure.photo{margin:0}
+
+  figure.diagram{background:var(--card);border:1px solid var(--border);padding:16px;margin:16px 0}
+  figure.diagram svg{width:100%;height:auto;display:block}
+  figure.diagram figcaption{font-size:13px;color:var(--ink-light);margin-top:8px}
+
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card)}
+  th{background:var(--ink);color:var(--cream);font-weight:400;letter-spacing:1px;text-align:left;padding:10px 12px;font-size:13px}
+  td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.65}
+  tr:nth-child(even) td{background:#faf7f2}
+  .tbl{overflow-x:auto;border:1px solid var(--border)}
+  .sig{font-weight:600}.sig.bad{color:var(--warn)}.sig.warn{color:var(--gold)}.sig.ok{color:var(--moss)}
+
+  .seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .season{padding:16px 14px;font-size:13.5px;line-height:1.75;color:var(--ink-light)}
+  .season b{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--ink);font-weight:600}
+  .season small{display:block;font-size:12px;opacity:.7;margin-bottom:6px;letter-spacing:1px}
+  .season.sp{background:#eef5ec;border-top:3px solid #7a9e72}.season.su{background:#fdf7e8;border-top:3px solid #d4af6a}
+  .season.au{background:#f7efe8;border-top:3px solid #c17f4a}.season.wi{background:#edf0f7;border-top:3px solid #6a7fa8}
+
+  footer{background:var(--ink);color:rgba(247,243,237,.55);text-align:center;padding:28px 16px;font-size:12.5px;line-height:1.9}
+
+  @media (max-width:680px){
+    .cover-inner{grid-template-columns:1fr;gap:28px}
+    .cover figure{max-width:320px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .two,.side{grid-template-columns:1fr}
+    .seasons{grid-template-columns:1fr 1fr}
+    .principle{padding:22px 20px}
+    .card{padding:16px 16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div>
+      <div class="eyebrow">Phalaenopsis · Auckland</div>
+      <h1>蝴蝶兰<br>奥克兰养殖指南</h1>
+      <p class="sub">从原生环境推导每一个动作：光、温、水、肥、盆。数字以 Tucker's Orchid Nursery 的建议为基准，按奥克兰的海洋性气候校准。</p>
+      <div class="ver">第二版 · 2026 年 10 月</div>
+    </div>
+    <figure>
+      <img src="img/pink-rime.jpg" alt="粉色花瓣带白边的蝴蝶兰 Pink Rime" width="1050" height="1400">
+      <figcaption>Phal. NOID 'Pink Rime'，粉瓣白边，花期很长</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main class="content">
+
+  <nav class="toc" aria-label="目录">
+    <a href="#light">光照</a><a href="#climate">温度与空气</a><a href="#water">浇水</a><a href="#feed">施肥与冲洗</a>
+    <a href="#bloom">花苞与开花</a><a href="#pot">换盆</a><a href="#pests">病虫害</a><a href="#year">年度节律</a><a href="#diag">快速诊断</a>
+  </nav>
+
+  <div class="principle">
+    <div class="label">底层逻辑</div>
+    <p>蝴蝶兰挂在东南亚雨林的树干侧面：<b>散射光、温暖、空气流动、根系干湿交替而且永远透气、养分稀薄但不间断</b>。书上没写的问题，回到这几条就能推出答案。</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="k">光照</div><div class="v">1000–1500 fc</div><div class="n">约 11–16 klux，能看书的亮度</div></div>
+    <div class="stat"><div class="k">夜温</div><div class="v">≥ 15°C</div><div class="n">冬季底线 12°C，白天 ≤ 30°C</div></div>
+    <div class="stat"><div class="k">VPD</div><div class="v">0.5–1.0</div><div class="n">kPa，比单看湿度更准</div></div>
+    <div class="stat"><div class="k">肥水 EC</div><div class="v">500–700</div><div class="n">µS/cm 成年株；小苗 250–400</div></div>
+    <div class="stat"><div class="k">介质 pH</div><div class="v">5.5–6.5</div><div class="n">顶淋法测流出液</div></div>
+    <div class="stat"><div class="k">冲洗</div><div class="v">每月 1 次</div><div class="n">从上往下浇两遍，间隔一小时</div></div>
+  </div>
+
+  <!-- 1 Light -->
+  <section id="light">
+    <div class="sh"><span class="num">一</span><h2>光照</h2></div>
+    <div class="card">
+      <h3>散射光，不要直射</h3>
+      <p>在 Tucker's 的四档光照里，蝴蝶兰属于最低的"遮阴"档（500–1500 fc）。实用标准是：这个位置的光够你看书。直射阳光几个小时就能把叶片晒伤。</p>
+    </div>
+    <div class="two">
+      <div class="card gold">
+        <h3>奥克兰的窗</h3>
+        <p>南半球朝北最亮，其次东北、东。离玻璃半米到一米，夏季午后拉薄纱。光强通常不是问题，<strong>玻璃后的积热</strong>才是。</p>
+      </div>
+      <div class="card moss">
+        <h3>看叶色</h3>
+        <p>深绿、叶软：光不够。亮绿偏黄绿：正好。泛红或发紫：光太强，要遮。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 Climate -->
+  <section id="climate">
+    <div class="sh"><span class="num">二</span><h2>温度与空气</h2></div>
+    <div class="card warn">
+      <h3>冬季：守住底线</h3>
+      <p>没开暖气的奥克兰室内冬夜常在 12–15°C。植株不会马上出问题，但会停止生长，也更容易染病。冬季的核心任务是<strong>维持温度下限</strong>；起花需要的降温，秋天顺其自然就够了。避开门缝冷风和暖气出风口。</p>
+    </div>
+    <div class="card">
+      <h3>用 VPD 思考，而不是只看湿度</h3>
+      <p>VPD 衡量空气"抽水"的力度。玻璃后面午后 28°C、湿度 50% 时，VPD 约 1.9 kPa，远超 0.5–1.0 的目标。同样的湿度降到 25°C、60%，就回到约 1.3。<strong>压住午后温度</strong>（遮阴、往里挪、通风）比加湿有效得多。几盆放在一起也能形成小气候。</p>
+    </div>
+    <div class="side">
+      <figure class="photo">
+        <img src="img/tray.jpg" alt="铺满卵石、底部蓄水的大托盘，多盆兰花放在上面" width="660" height="890" loading="lazy">
+        <figcaption>湿石子托盘：水在石头下面蒸发，盆底悬空。</figcaption>
+      </figure>
+      <div>
+        <div class="card moss">
+          <h3>湿石子托盘的正确用法</h3>
+          <p>Tucker's 的原话：盆可以放在湿石子上，但<strong>不能真的泡在水里</strong>。水是用来蒸发的，不是用来泡根的；泡着会让下层介质缺氧，还会把盐分吸回去。效果只在叶片周围几厘米内，别期望太高。</p>
+        </div>
+        <div class="card">
+          <h3>通风</h3>
+          <p>空气流动能防止真菌孢子落定、防止花瓣起水斑，也让叶心积水更快干掉。奥克兰冬季阴湿，通风尤其重要。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Water -->
+  <section id="water">
+    <div class="sh"><span class="num">三</span><h2>浇水</h2></div>
+    <div class="card gold">
+      <h3>核心法则</h3>
+      <p><strong>根要湿透，叶要干。</strong>控制的变量是间隔，不是水量：每次都浇透，下次等到干了再浇。拿不准就再等两三天，偏干比偏湿安全。</p>
+    </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 640 210" role="img" aria-label="根的颜色：湿润时绿色，干燥时银白色">
+        <rect x="0" y="0" width="640" height="210" fill="#fbf8f3"/>
+        <g font-family="Noto Serif SC, serif" font-size="15" fill="#3d3028">
+          <text x="160" y="28" text-anchor="middle" font-weight="600" fill="#4a6741">绿色：还湿，先别浇</text>
+          <text x="480" y="28" text-anchor="middle" font-weight="600" fill="#8b4a6b">银白：干了，该浇</text>
+        </g>
+        <!-- pots -->
+        <g stroke="#b9ab96" stroke-width="2" fill="rgba(230,240,245,.45)">
+          <path d="M90 60 L230 60 L215 190 L105 190 Z"/>
+          <path d="M410 60 L550 60 L535 190 L425 190 Z"/>
+        </g>
+        <g stroke-linecap="round" fill="none" stroke-width="9">
+          <path d="M160 70 C140 100 120 120 118 170" stroke="#6f9a5c"/>
+          <path d="M160 70 C170 110 190 130 200 178" stroke="#6f9a5c"/>
+          <path d="M160 70 C150 120 162 150 152 185" stroke="#7fa96a"/>
+          <path d="M480 70 C460 100 440 120 438 170" stroke="#d9d6cc"/>
+          <path d="M480 70 C490 110 510 130 520 178" stroke="#d9d6cc"/>
+          <path d="M480 70 C470 120 482 150 472 185" stroke="#e3e0d7"/>
+        </g>
+        <g fill="#6f9a5c"><circle cx="118" cy="172" r="4.5"/><circle cx="200" cy="180" r="4.5"/></g>
+        <g fill="#7fa96a"><circle cx="438" cy="172" r="4.5"/><circle cx="520" cy="180" r="4.5"/></g>
+        <text x="480" y="205" text-anchor="middle" font-family="Noto Serif SC, serif" font-size="12" fill="#7a6a58">根尖仍是绿色 = 活跃生长</text>
+      </svg>
+      <figcaption>透明盆最直观。根被（velamen）吸水后透出叶绿素的绿色，干了以后充满空气，变成银白色。</figcaption>
+    </figure>
+
+    <div class="two">
+      <div class="card">
+        <h3>判断该不该浇</h3>
+        <ul>
+          <li><strong>掂重</strong>：最可靠。记住刚浇透时的手感。</li>
+          <li><strong>看根色</strong>：大部分转银白再浇。</li>
+          <li><strong>看盆壁</strong>：还有水珠就先别浇。</li>
+          <li><strong>水苔</strong>：手指插到中心，还湿就等。</li>
+        </ul>
+      </div>
+      <div class="card moss">
+        <h3>泡盆的规矩</h3>
+        <ul>
+          <li>泡 10–15 分钟就够，再久会挤掉介质里的空气。</li>
+          <li>不要多盆共用一盆水，软腐菌靠水传播。</li>
+          <li>早上泡，天黑前叶心要干。</li>
+          <li>滴干再放回套盆，套盆底不能积水。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">叶心（crown）是全株最脆弱的地方。浇完如果叶心或叶腋有积水，把盆斜过来倒掉，或用纸巾吸干。春天的自来水偏凉，冲之前放一会儿，接近室温再用。</div>
+  </section>
+
+  <!-- 4 Feed -->
+  <section id="feed">
+    <div class="sh"><span class="num">四</span><h2>施肥与冲洗</h2></div>
+    <div class="card gold">
+      <h3>全年用同一款高钾肥，不切换</h3>
+      <p>Tucker's 的说法：蝴蝶兰<strong>没有休眠期，全年用 Moth Orchid Tucker</strong>，每月清水冲洗一次。换成别的肥，容易长叶多、开花少。手边没有的话，Flowering Orchid Tucker 是最接近的替代（同样走高钾路线）。起作用的是降氮提钾，高磷并不促花。</p>
+    </div>
+    <div class="tbl">
+      <table>
+        <tr><th>对象</th><th>肥水 EC（µS/cm）</th><th>说明</th></tr>
+        <tr><td>成年株，生长期</td><td>500–700</td><td rowspan="2">Tucker's 给的总范围是 500–1300，蝴蝶兰取下段。EC 含自来水本底，先测一次自来水。</td></tr>
+        <tr><td>成年株，花期</td><td>400–600</td></tr>
+        <tr><td>小苗、刚换盆</td><td>250–400</td><td>水苔更容易积盐，压在最低档。</td></tr>
+      </table>
+    </div>
+    <div class="two" style="margin-top:12px">
+      <div class="card">
+        <h3>恢复施肥要阶梯式加量</h3>
+        <p>冬天少喂之后，按 Tucker's 的阶梯从 <strong>1/4 浓度</strong>开始，每月加一档：1/4 → 1/2 → 3/4 → 全量。天冷时把间隔拉长到 10–14 天，但不完全停。</p>
+      </div>
+      <div class="card">
+        <h3>测 pH：顶淋法</h3>
+        <p>浇水一小时后，从上淋一点蒸馏水，接盆底流出的约 30 ml 来测。目标 5.5–6.5。偏高用柠檬酸往下调，偏低用石灰往上调。同一份水顺便测 EC，看趋势。</p>
+      </div>
+    </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 640 230" role="img" aria-label="泡盆时盐分随水上行留在表层；从上往下冲洗才能把盐分带出盆外">
+        <rect width="640" height="230" fill="#fbf8f3"/>
+        <g font-family="Noto Serif SC, serif" fill="#3d3028">
+          <text x="160" y="26" text-anchor="middle" font-size="15" font-weight="600">泡盆：只能喂，不能洗</text>
+          <text x="480" y="26" text-anchor="middle" font-size="15" font-weight="600">顶浇冲洗：把盐带出去</text>
+        </g>
+        <!-- left: soak -->
+        <rect x="70" y="150" width="180" height="50" fill="#cfe3ec" stroke="#9fbccb"/>
+        <path d="M100 50 L220 50 L208 190 L112 190 Z" fill="#e9dccb" stroke="#b9ab96" stroke-width="2"/>
+        <g fill="#ffffff" stroke="#b9ab96"><circle cx="128" cy="62" r="5"/><circle cx="146" cy="58" r="5"/><circle cx="166" cy="62" r="5"/><circle cx="186" cy="59" r="5"/><circle cx="204" cy="63" r="5"/><circle cx="137" cy="72" r="4"/><circle cx="176" cy="72" r="4"/><circle cx="195" cy="73" r="4"/></g>
+        <g stroke="#6a9bb3" stroke-width="2.5" fill="#6a9bb3">
+          <line x1="135" y1="180" x2="135" y2="100"/><path d="M129 106 L135 94 L141 106 Z"/>
+          <line x1="185" y1="180" x2="185" y2="100"/><path d="M179 106 L185 94 L191 106 Z"/>
+        </g>
+        <text x="160" y="222" text-anchor="middle" font-family="Noto Serif SC, serif" font-size="12.5" fill="#7a6a58">水往上走、从表面蒸发，盐（白点）积在上层</text>
+        <!-- right: flush -->
+        <path d="M420 50 L540 50 L528 190 L432 190 Z" fill="#e9dccb" stroke="#b9ab96" stroke-width="2"/>
+        <g stroke="#6a9bb3" stroke-width="2.5" fill="#6a9bb3">
+          <line x1="455" y1="40" x2="455" y2="150"/><path d="M449 144 L455 156 L461 144 Z"/>
+          <line x1="505" y1="40" x2="505" y2="150"/><path d="M499 144 L505 156 L511 144 Z"/>
+        </g>
+        <g fill="#ffffff" stroke="#b9ab96"><circle cx="462" cy="200" r="4.5"/><circle cx="480" cy="207" r="4.5"/><circle cx="498" cy="201" r="4.5"/></g>
+        <g stroke="#6a9bb3" stroke-width="2" stroke-dasharray="4 4"><line x1="470" y1="192" x2="466" y2="210"/><line x1="490" y1="192" x2="494" y2="210"/></g>
+        <text x="480" y="222" text-anchor="middle" font-family="Noto Serif SC, serif" font-size="12.5" fill="#7a6a58">浇一遍溶解，一小时后再浇两倍盆体积的水</text>
+      </svg>
+      <figcaption>喜欢泡盆没问题，但每月那次冲洗必须从上往下浇。冲洗快结束时测一下流出液 EC：接近自来水本底，就说明冲干净了。</figcaption>
+    </figure>
+  </section>
+
+  <!-- 5 Bloom -->
+  <section id="bloom">
+    <div class="sh"><span class="num">五</span><h2>花苞与开花</h2></div>
+    <div class="side">
+      <figure class="photo">
+        <img src="img/bud.jpg" alt="掰开的掉落花苞：花瓣已成形上色，纸质干枯，药帽完整" width="1160" height="1288" loading="lazy">
+        <figcaption>掰开的落苞：花瓣已经成形、上色，里面干净没有虫。这是快要开时被干空气"抽干"的。</figcaption>
+      </figure>
+      <div>
+        <div class="card">
+          <h3>两种落苞，原因不同</h3>
+          <p><strong>花序末端又小又绿的苞变黄掉落</strong>：换环境后植株放弃最弱的库，一次性的，正常。<br><strong>快开的大苞在开放前干掉</strong>：开放那一刻空气太热太干，多半是玻璃后的午后积热。改善位置的小气候。</p>
+        </div>
+        <div class="card warn">
+          <h3>剖开落苞看一眼</h3>
+          <p>里面干净只是发黄，是生理性的；有褐色条斑、残渣或小虫，是蓟马或粉介壳虫。还要远离成熟水果和燃气取暖器（乙烯）。</p>
+        </div>
+      </div>
+    </div>
+    <div class="two" style="margin-top:12px">
+      <div class="card moss">
+        <h3>花期里</h3>
+        <p>不挪位置、不转盆，浇水节奏保持稳定。花苞已经朝光排好了，转动会让花序变乱。每隔几天看看花梗：开始发黄的那个苞，就是下一个要掉的。</p>
+      </div>
+      <div class="card gold">
+        <h3>促使再开花</h3>
+        <p>秋天让昼夜平均温度下降 5–8°C，最多持续 6 周，在奥克兰挪进没开暖气的房间即可。这期间继续喂，每 10–14 天一次。花谢后，剪在第一朵花下面那个节点上方，节点可能再抽出侧枝。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Pot -->
+  <section id="pot">
+    <div class="sh"><span class="num">六</span><h2>基质与换盆</h2></div>
+    <div class="side">
+      <div>
+        <div class="card gold">
+          <h3>什么时候换</h3>
+          <p>花谢之后、<strong>新根尖刚冒出 0.5–1 cm</strong> 时，春到夏，12 月最理想。有花箭的不换。开始考虑换盆的信号：同季节下干燥间隔明显变长、树皮一捏就碎、有酸味，或者根往盆外逃。</p>
+        </div>
+        <div class="card">
+          <h3>怎么换</h3>
+          <ul>
+            <li>盆只比根团大一点，多出来的介质只会多持水。</li>
+            <li>种到最下面一片叶子下方第一条根的高度。</li>
+            <li>牢牢附在根上的树皮别硬扯。</li>
+            <li>新树皮提前泡一夜，解决疏水问题。</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="img/seedlings.jpg" alt="两棵蝴蝶兰小苗，左边种在树皮里，右边种在水苔里" width="618" height="567" loading="lazy">
+        <figcaption>左：树皮小苗；右：水苔小苗（紫式部）。水苔持水能力强得多，十几天不干很正常。</figcaption>
+      </figure>
+    </div>
+    <div class="card moss">
+      <h3>水苔还是树皮</h3>
+      <p><strong>水苔</strong>省事、保湿，适合小苗和暖和的房间，但一年左右就会分解，而且最容易浇多。<strong>细到中号树皮</strong>（小苗用 2 号，5–10 mm）通气、耐用，和成年株的管理也一致。从水苔换到树皮的头几周干得快很多，要浇得勤一些。</p>
+    </div>
+  </section>
+
+  <!-- 7 Pests -->
+  <section id="pests">
+    <div class="sh"><span class="num">七</span><h2>病虫害</h2></div>
+    <div class="two">
+      <div class="card warn">
+        <h3>粉介壳虫（mealybug）</h3>
+        <p>白色棉絮状，藏在叶腋、根和介质深处。Tucker's 的办法是喷叶子之外，<strong>整盆浸入药液</strong>，连介质里的虫源一起清掉。系统性药剂（如 Groventive）被根吸收进汁液，能顾及喷不到的角落。</p>
+      </div>
+      <div class="card">
+        <h3>用药提醒</h3>
+        <p>BioNeem 对蝴蝶兰要谨慎，先在一片叶上试。烂根的处理：剪掉褐色、发软、外皮一捏就滑脱的根，撒硫磺粉或肉桂粉，换新介质、换小盆。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Year -->
+  <section id="year">
+    <div class="sh"><span class="num">八</span><h2>奥克兰年度节律</h2></div>
+    <div class="seasons">
+      <div class="season sp"><b>春</b><small>9–11 月</small>恢复施肥，1/4 起步<br>花谢后换盆<br>盯住玻璃后的午后热</div>
+      <div class="season su"><b>夏</b><small>12–2 月</small>生长最旺<br>勤浇、照常喂<br>遮正午光、加强通风</div>
+      <div class="season au"><b>秋</b><small>3–5 月</small>自然降温触发起花<br>花箭出来后不挪位置<br>夜里注意保温</div>
+      <div class="season wi"><b>冬</b><small>6–8 月</small>守住 12°C 底线<br>拉长浇水间隔<br>放在最亮的朝北窗</div>
+    </div>
+  </section>
+
+  <!-- 9 Diagnosis -->
+  <section id="diag">
+    <div class="sh"><span class="num">九</span><h2>快速诊断</h2></div>
+    <div class="tbl">
+      <table>
+        <tr><th>看到的</th><th>可能原因</th><th>怎么做</th></tr>
+        <tr><td><span class="sig warn">叶片深绿、发软</span></td><td>光照不足</td><td>往朝北窗挪，冬季可以补光</td></tr>
+        <tr><td><span class="sig bad">叶面焦斑或泛红</span></td><td>直射光或玻璃积热</td><td>离开玻璃，下午拉薄纱</td></tr>
+        <tr><td><span class="sig warn">叶片发软起皱</span></td><td>缺水，或根坏了吸不上水</td><td>先看根：根是湿的、叶却软，就是根的问题</td></tr>
+        <tr><td><span class="sig bad">根褐色、软烂</span></td><td>积水缺氧</td><td>剪掉烂根，换新介质，用小盆</td></tr>
+        <tr><td><span class="sig bad">叶心发黑腐烂</span></td><td>叶心积水过夜</td><td>改早上浇；切掉腐烂部分，撒硫磺粉</td></tr>
+        <tr><td><span class="sig warn">叶尖发褐，盆面有白霜</span></td><td>积盐</td><td>顶浇冲洗两遍，测流出液 EC</td></tr>
+        <tr><td><span class="sig warn">快开的苞干掉</span></td><td>午后热、空气干</td><td>往里挪，遮阴，放湿石子托盘</td></tr>
+        <tr><td><span class="sig warn">只长叶不开花</span></td><td>氮太多，或缺少秋季降温</td><td>坚持用高钾肥，秋天降温处理</td></tr>
+        <tr><td><span class="sig bad">叶腋有白色棉絮</span></td><td>粉介壳虫</td><td>整盆浸药，配合系统性药剂</td></tr>
+        <tr><td><span class="sig ok">亮绿叶、绿色根尖</span></td><td>状态良好</td><td>保持现状</td></tr>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  蝴蝶兰奥克兰养殖指南 · 第二版<br>
+  参考：Tucker's Orchid Nursery《Orchids for Everyone》通讯（2023–2026）、OrchidWiz，以及自家植株的观察记录
+</footer>
+
+</body>
+</html>
